@@ -94,7 +94,7 @@
 			</div>
 			<div class="row">
 				<div class="content-bio">
-					<p align="justify">I am a Post Doctoral Research Associate in the Computing  Division at Argonne National Laboratory. 
+					<p align="justify">I am a Post Doctoral Research Associate in the Advanced Leadership Computing Facility (ALCF) at Argonne National Laboratory. 
 						My current research work is on Deep Learning methods such as reinforcement learning, active learning and 
 						generative models for autonomous design of material’s atomic structure with desired  physical and mechanical 
 						properties. To this end, some of my current projects includes predictive synthesis and design of quantum materials 
@@ -103,7 +103,7 @@
 						research interest also includes meta-learning and current challenges in these models such as problems related 
 						to task-memorization  in few-shot learning.</p>
 
-					<p align="justify">Previously, I did my Ph.D. in Computational Material Science and MS in Computer Science with 
+					<p align="justify">I received my Ph.D. in Computational Material Science and MS in Computer Science with 
 						Data Science specialization from University of Southern California (USC) under the guidance of 
 						Prof. Priya Vashishta, Prof. Aiichiro Nakano and Prof. Rajiv Kalia. During my Ph.D, the focus of dissertation 
 						topic was on force field development for materials simulation, large scale reactive molecular dynamics simulation 
@@ -142,8 +142,15 @@
 				 NeurIPS workshop, Machine Learning and the Physical Sciences</a>.
 				</td>
 			</tr>
+			</tr>
+			<tr><td>May 2020</td><td>
+				Presented at <a target="_blank" href="https://2020.scadl.org/talk-videos"> SCADL workshop at IPDPS conference on <a target="_blank" href="https://ieeexplore.ieee.org/document/9150357">
+				 Neural Network Molecular Dynamics at Scale</a>.
+				</td>
+			</tr>
+					
 			<tr><td>Sep 2019</td><td>
-				Gave invited talk at on "Generative and	Reinforcement Learning for Interfaces and Metamaterial Design" at 
+				Gave invited talk on "Generative and Reinforcement Learning for Interfaces and Metamaterial Design" at 
 				<a target="_blank" href="https://cint.lanl.gov/news/events/2019-cint-annual-meeting.php"> CINT Annual Meeting </a> organised by ointly operated by Los Alamos 
 				and Sandia National Laboratorie.
 			</td>
@@ -250,10 +257,12 @@
 					<div class="col-md-6">
 						<div class="pub">
 							<div class="pubt">Quantum Material Synthesis using Reinforcement Learning </div>
-							<div class="pubd">								
-								Designed a Reinforcement Leaning (RL) model coupled with a deep generative model to propose the optimal synthesis condition
-								of 2D quantum material. After trainng, RL agent not only outperformed the random baseline model by more then 50% by desiging
-								optimal policy of synthesis condtiom of reaction temperature and reactant gas concentration but also provided mechanistic insight 
+							<div class="pubd">	
+								Designing experimental synthesis condition of materials is a challenging task as it involves decision making process 
+								of time-dependent synthesis parameters. Further, these experiments take very long time to perform, and thus its not
+								feasible to use the active learning approaches to directly learn the optimal synthesis condition. Here, we have used Offline Model 
+								based Reinforcement Leaning (RL) to propose the optimal synthesis condition of 2D quantum material. After trainng, RL agent 
+								not only outperformed the random baseline model by more then 50% by desiging optimal policy of synthesis condtiom of reaction temperature and reactant gas concentration but also provided mechanistic insight 
 								of synthesis process itself in terms of synthesis parameters
 								
 							</div>
@@ -281,16 +290,16 @@
 						<div class="pub">
 							<div class="pubt">Equivariant Deep Neural Network Force Field for Molecular Dynamics Simulation</div>
 							<div class="pubd">
-								The potential energy surface for Kevlar under shock is too complex making it challenging to find a global minima
-								useful for its design and fabrication. Furthermore, computation on each structure is extremely costly. 
-								Thus, we employ Bayesian optimization technique to efficiently find the optimal solution. 
+								Conventional Energy based Neural Network based force field for molecular dynamics(NNMD) model are
+								expensive to perform large scale and long time simulation as computation of atomic fotces requies 
+								derivative of Neural Network (NN) at each time step. We have developed a Equivariant NN based field 
+								model that is designed to directly predict atomic forces at density functional theory (DFT) level accuracy. 
 							</div>
-							<div class="puba">Subodh Tiwari, Kohei Shimamura, Ankit Mishra, Fuyuki Shimojo</div>
-							<div class="pubv">Project, Spring 2019</div>
+							<div class="pubv">Nov' 2018 - Dec' 2019</div>
 							<div class="publ">
 								<ul>
-									<li><a target="_blank" href="pdf/bo.pdf">PDF</a></li>
-									<li><a target="_blank" href="https://github.com/AnkitMish/Kevlar-BayesOpt">Code</a></li>
+									<li><a target="_blank" href="https://ieeexplore.ieee.org/abstract/document/9150357">Conference Paper</a></li>
+									<li><a target="_blank" href="https://github.com/rajak7/ML_MD">Code</a></li>
 								</ul>
 							</div>
 						</div>
@@ -309,18 +318,19 @@
 						<div class="pub">
 							<div class="pubt">Active Learning for Material Design </div>
 							<div class="pubd">
-								Used various Evolutionary Algorithms such as Genetic Algorithms, Particle Swarm Optimization,
-								Differential Evolution to quantify the uncertainty involved in multi-objective optimization
-								of general material simulations. Here, we used a famous Multi Objective Optimization library
-								<a target="_blank" href="https://github.com/Project-Platypus/Platypus">Platypus</a> to build a framework
-								incorporating various popular simulation software used in Materials simulations such as 
-								<a target="_blank" href="https://lammps.sandia.gov/">LAMMPS</a>, 
+								Properies such as band gap and thermoelectric behaviour of vertically stacked 2D materials can be tunned by careully choosing the 
+								compostion of materials at each layer. However, the state space of material goes exponentially with the number of layers and 
+								qunatim mechanical (QM) calculation of each structure is very expensive and time consuming. Thus, brute force or regression based models
+								are not suitable choice to find the optimial structure from this exponentially large search space. Here, we have developed an active
+								learning model based on Bayesian optimization to find the best stacked 2D material structure with desired properties with minimum QM 
+								calculation.
+								
 							</div>
-							<div class="puba">Aravind Krishnamoorthy and Ankit Mishra</div>
-							<div class="pubv">Project, Spring 2018 - Spring 2019</div>
+							<div class="pubv">Jan' 2017 - Feb' 2018</div>
 							<div class="publ">
 								<ul>
-									<li><a target="_blank" href="https://github.com/arvk/EZFF">CODE</a></li>
+									li><a target="_blank" href="https://www.nature.com/articles/s41524-018-0129-0">Paper</a></li>
+									<li><a target="_blank" href="https://github.com/rajak7/Bayesian_Optimization_Material_design">CODE</a></li>
 								</ul>
 							</div>
 						</div>
@@ -339,22 +349,18 @@
 						<div class="pub">
 							<div class="pubt">Deep Generative Model for Phase Transformation in Materials</div>
 							<div class="pubd">
-								Visualization plays a critically important role in modern scientific research project. 
-								It is a very powerful tool to express results from observation and experiments, and visually
-								provides scientists with an intuitive overview of the results. We used "Acer Windows Mixed Reality Headsets"
-								which has 1440x1440 resolution and 90 fps at maximum, as a head-mounted display to immersively visualize 
-								materials simulations in real time. GEARS-XR consist of three components: 
-								<a target="_blank" href="https://lammps.sandia.gov/">LAMMPS interface</a>, 
-								multi-user component, and the rendering component.
-								Different from any other applications, e.g., games or movies, scientific visualization require strict 
-								criteria for preciseness, which makes multi-user component and rendering component non-trivial technical
-								 building blocks.
+								Learning the mechanism of phase transformation in matwrials is a complex and time consuming process.
+								Here, we have developed a generative model of the phase transformation pathways in MoWSe2 
+								during dyanamic fracture using variational autoencoder(VAE). The trained VAE model correctly identifies
+								transformation pathways connecting the semiconducting (2H) and metallic (1T) phases via novel intermediate
+								structures, which is also observed experimently. Further, the mechanistic insight of transformation 
+								provided by VAE is much faster then tradtional molecular dynamics simulation that takes 2-3 days.
 							</div>
-							<div class="puba">Ankit Mishra, Vaibhav Desai, Rohan Rout and Hikaru Ibayashi</div>
 							<div class="pubv">Augmented and Virtual Reality Project, Fall 2018</div>
 							<div class="publ">
 								<ul>
-									<li><a target="_blank" href="https://github.com/USCCACS/GEARS-XR">CODE</a></li>
+									li><a target="_blank" href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.100.014108">Paper</a></li>
+									<li><a target="_blank" href="https://github.com/rajak7/VAE_Phase_Transformation">CODE</a></li>
 								</ul>
 							</div>
 						</div>
